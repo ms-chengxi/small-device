@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=42.0.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deltaGPT"
+version = "0.0.1"
+description= "DeltaGPT project."
+readme = "README.md"
+requires-python = ">=3.8,<3.12"
+dependencies = [
+    "transformers==4.43.0",
+    "torch",
+    "sentencepiece",
+    "sentence_transformers",
+    "lm_eval==0.4.1",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "datasets==2.18.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["*_test.py", "tests/*", "experiments/*"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed", "*.json"]
+
+[tool.pyright]
+typeCheckingMode = "standard"
+exclude = [
+    "**/__pycache__",
+    "**/node_modules",
+    "**/.*", # this covers .venv*
+    "**/venv*",
+    "**/ENV",
+    "**/env",
+]
+pythonVersion = "3.10"
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+target-version = ['py310']
+
+[tool.isort]
+py_version = 310
+profile = "black"
+line_length = 120

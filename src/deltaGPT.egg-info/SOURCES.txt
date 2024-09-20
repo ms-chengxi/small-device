@@ -1,0 +1,10 @@
+README.md
+nuget.config
+pyproject.toml
+scratch/.gitkeep
+src/compression/tests.py
+src/deltaGPT.egg-info/PKG-INFO
+src/deltaGPT.egg-info/SOURCES.txt
+src/deltaGPT.egg-info/dependency_links.txt
+src/deltaGPT.egg-info/requires.txt
+src/deltaGPT.egg-info/top_level.txt

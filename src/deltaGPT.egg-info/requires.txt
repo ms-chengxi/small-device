@@ -1,0 +1,9 @@
+transformers==4.43.0
+torch
+sentencepiece
+sentence_transformers
+lm_eval==0.4.1
+numpy
+scipy
+matplotlib
+datasets==2.18.0
